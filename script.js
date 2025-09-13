@@ -3,14 +3,26 @@ document.addEventListener("DOMContentLoaded", () => {
   const toggle = document.querySelector(".menu-toggle");
   const nav = document.querySelector(".nav-links");
 
-  toggle.addEventListener("click", () => {
+  // Toggle open/close
+  toggle.addEventListener("click", (e) => {
+    e.stopPropagation();
     nav.classList.toggle("show");
-    // Change icon between bars and times
+
+    // Change icon depending on state
     toggle.innerHTML = nav.classList.contains("show")
       ? '<i class="fas fa-times"></i>'
       : '<i class="fas fa-bars"></i>';
   });
+
+  // Close when clicking outside
+  document.addEventListener("click", (e) => {
+    if (nav.classList.contains("show") && !nav.contains(e.target) && !toggle.contains(e.target)) {
+      nav.classList.remove("show");
+      toggle.innerHTML = '<i class="fas fa-bars"></i>';
+    }
+  });
 });
+
 
 
 
@@ -46,6 +58,7 @@ function openModal(card) {
   const modalImg = document.getElementById("modalImage");
   const captionText = document.getElementById("caption");
   const thumbContainer = document.getElementById("modalThumbnails");
+
 
   // Get product data
   const images = card.dataset.images ? card.dataset.images.split(",") : [card.querySelector("img").src];

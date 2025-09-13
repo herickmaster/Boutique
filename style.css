@@ -34,75 +34,143 @@ header {
   z-index: 10;
 }
 
-html {
-  scroll-behavior: smooth;
-}
-
-
-.nav-links {
-  display: flex;
-  gap: 1rem;
-}
-
-.menu-toggle {
-  display: none;
-  background: none;
-  border: none;
-  font-size: 1.5rem;
-  cursor: pointer;
-}
-
-/* Mobile view */
-@media (max-width: 768px) {
-  .nav-links {
-    display: none;
-    flex-direction: column;
-    background: #fff;
-    position: absolute;
-    top: 60px;
-    right: 20px;
-    width: 200px;
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-    padding: 1rem;
-  }
-
-  .nav-links.show {
-    display: flex;
-  }
-
-  .menu-toggle {
-    display: block;
-  }
-}
-
-
-header h1 {
-  font-size: 1.6rem;
-  font-weight: bold;
-}
-
 nav {
   display: flex;
   gap: 1rem;
 }
-
 nav a {
   text-decoration: none;
   color: #ffffff;
   font-size: 0.95rem;
 }
-
 nav a:hover {
   color: #6d0e2e;
+}
+
+/* Mobile header adjustments */
+@media (max-width: 768px) {
+  header {
+    padding: 0.5rem 1em;   /* less padding */
+  }
+  header h1 {
+    font-size: 1.2rem;      /* smaller text */
+  }
+  header .logo {
+    height: 35px;           /* shrink logo */
+  }
+  .menu-toggle {
+    font-size: 1.2rem;      /* smaller hamburger */
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+
+/* Hide hamburger on desktop */
+.menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 1.8rem;
+  cursor: pointer;
+  color: #3f3e3e;
+  position: absolute;
+  top: 30px;
+  right: 20px;
+  z-index: 1100; /* above the menu */
+}
+
+.menu-toggle i {
+  pointer-events: none; /* ensures click always hits button */
+}
+
+/* Mobile Menu Styles */
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block; /* Show hamburger */
+  }
+
+  .nav-links {
+    position: fixed;
+    top: 0;
+    right: -100%; /* Hidden off screen */
+    width: 60%;
+    height: 70%;
+    background: #cec4c4e9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: right 0.4s ease-in-out;
+    box-shadow: -2px 0 10px rgba(0,0,0,0.1);
+  }
+
+  .nav-links.show {
+    right: 0; /* Slide in */
+  }
+
+  /* Make sure inner nav stacks vertically */
+  .nav-links #nav-menu {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    width: 100%;
+    text-align: center;
+  }
+
+  .nav-links #nav-menu a {
+    font-size: 1.3rem;
+    font-weight: 600;
+    text-decoration: none;
+    color: #4b4a4a;
+    transition: color 0.3s ease;
+  }
+  .nav-links #nav-menu a:active,
+.nav-links #nav-menu a:focus {
+  color: #b87333;
+}
+}
+
+/* Navbar default (desktop view) */
+.nav-links {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.nav-links a {
+  text-decoration: none;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;
+  color: #f2e0e0;
+  transition: color 0.3s ease;
 }
 
 
 
 
+
+.breadcrumb {
+  font-size: 0.9rem;
+  padding: 0.8rem 2rem;
+  background: #f9f9f9;
+  border-bottom: 1px solid #eee;
+}
+.breadcrumb a {
+  color: #e91e63;
+  text-decoration: none;
+  margin-right: 5px;
+}
+.breadcrumb a:hover {
+  text-decoration: underline;
+}
+.breadcrumb span {
+  color: #555;
+}
+
 /* Hero */
 .hero {
-  height: 65vh;
+  height: 70vh;
   background: url('images/WhatsApp\ Image\ 2025-09-08\ at\ 14.54.31_bb141bf6.jpg') center/cover no-repeat;
   display: flex;
   align-items: center;
@@ -127,6 +195,27 @@ nav a:hover {
 .hero h2 {
   font-size: 2.8rem;
   margin-bottom: 1rem;
+}
+
+/* On mobile */
+@media (max-width: 768px) {
+  .hero {
+    height: 40vh; /* smaller hero */
+    background-position: center top; /* adjust which part of image is shown */
+  }
+  .hero h2 {
+    font-size: 1.5rem; /* smaller heading */
+    margin-bottom: 0.5rem;
+    margin-top: 0rem;
+  }
+  .hero p {
+    font-size: 0.7rem;
+    margin-top: 0.5rem;
+  }
+  .hero .btn {
+    padding: 0.5rem 1rem;
+    font-size: 0.85rem;
+  }
 }
 
 /* Buttons */
@@ -170,9 +259,6 @@ nav a:hover {
 }
 
 
-
-
-
 /* Cards */
 
 
@@ -206,6 +292,7 @@ nav a:hover {
 
 
 
+
 /* Testimonials */
 .testimonials {
   background: #f8dada97;
@@ -216,6 +303,19 @@ nav a:hover {
   max-width: 700px;
   margin: auto;
   font-style: italic;
+}
+
+
+/* Mobile Adjustments */
+@media (max-width: 768px) {
+  .testimonials {
+    padding: 2rem 1rem;   /* less padding */
+  }
+
+  .testimonial {
+    font-size: 0.9rem;    /* smaller text */
+    margin: 1rem auto;    /* less spacing */
+  }
 }
 
 /* Visit Us */
@@ -232,7 +332,15 @@ nav a:hover {
   border-radius: 15px;
 }
 
+img[alt="Find us on Google Maps"]:hover {
+  opacity: 0.8;
+  transform: scale(1.02);
+  transition: 0.3s;
+}
 
+img[alt="Find us on Google Maps"]:hover {
+  transition: 0.2s ease;
+}
 
 /* Responsive adjustments */
 @media(max-width: 768px) {
@@ -241,23 +349,27 @@ nav a:hover {
   }
 }
 
-.breadcrumb {
-  font-size: 0.9rem;
-  padding: 0.8rem 2rem;
-  background: #f9f9f9;
-  border-bottom: 1px solid #eee;
+@media(max-width: 768px) {
+  .about {
+    padding-bottom: 0rem;
+  }
 }
-.breadcrumb a {
-  color: #e91e63;
-  text-decoration: none;
-  margin-right: 5px;
+
+@media(max-width: 768px) {
+  #collections {
+    padding-top: 0.5rem;
+  }
 }
-.breadcrumb a:hover {
-  text-decoration: underline;
-}
-.breadcrumb span {
-  color: #555;
-}
+
+/* Mobile adjustments for product grids */
+@media (max-width: 768px) {
+  .section {
+    padding: 20px 10px;   /* shrink section padding */
+  }
+
+
+
+
 
 /* Product Grid */
 .grid-3 {
@@ -294,6 +406,49 @@ nav a:hover {
   color: #333;
 }
 
+/* Featured */
+.card.special {
+  border: 3px solid #e91e63;        /* bright border */
+  box-shadow: 0 8px 20px rgba(233, 30, 99, 0.4); 
+  transform: scale(1.0);           /* slightly bigger */
+}
+
+.card.special h3 {
+  color: #e91e63;                   /* highlight title */
+  font-weight: bold;
+}
+
+/* Optional badge */
+.card .badge {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background: #e91e63;
+  color: white;
+  font-size: 0.8rem;
+  padding: 4px 8px;
+  border-radius: 5px;
+  font-weight: bold;
+}
+
+
+/* For mobile */
+@media (max-width: 768px) {
+  .card {
+    width: 90%;   /* shrink cards to fit screen */
+    margin: 0.5rem auto; /* center cards */
+    padding: 0.8rem;
+    height: 90%;
+  }
+
+  .card h3 {
+    font-size: 1rem; /* smaller text */
+  }
+
+  .card img {
+    border-radius: 6px;
+  }
+}
 
 /*lightbox*/
 .modal {
@@ -338,6 +493,8 @@ nav a:hover {
   opacity: 0;
   transition: transform 0.4s ease, opacity 0.4s ease;
 }
+
+
 
 .modal.show .modal-content {
   transform: scale(1);
@@ -432,18 +589,21 @@ nav a:hover {
   color: #555;
 }
 
-img[alt="Find us on Google Maps"]:hover {
-  opacity: 0.8;
-  transform: scale(1.02);
-  transition: 0.3s;
+/* Mobile adjustments for Visit Store */
+@media (max-width: 768px) {
+  .visit-store {
+    padding: 20px 10px;      /* less padding */
+    margin-top: 20px;        /* smaller gap */
+  }
+
+  .visit-store h2 {
+    font-size: 1.4rem;       /* smaller heading */
+  }
+
+  .visit-store p {
+    font-size: 0.95rem;      /* smaller paragraph */
+  }
 }
-
-img[alt="Find us on Google Maps"]:hover {
-  transition: 0.2s ease;
-}
-
-
-
 
 /* Footer */
 footer {
@@ -463,32 +623,6 @@ footer nav a {
 }
 footer nav a:hover {
   color: #fff;
-}
-
-
-/* Featured */
-.card.special {
-  border: 3px solid #e91e63;        /* bright border */
-  box-shadow: 0 8px 20px rgba(233, 30, 99, 0.4); 
-  transform: scale(1.03);           /* slightly bigger */
-}
-
-.card.special h3 {
-  color: #e91e63;                   /* highlight title */
-  font-weight: bold;
-}
-
-/* Optional badge */
-.card .badge {
-  position: absolute;
-  top: 10px;
-  left: 10px;
-  background: #e91e63;
-  color: white;
-  font-size: 0.8rem;
-  padding: 4px 8px;
-  border-radius: 5px;
-  font-weight: bold;
 }
 
 
