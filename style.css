@@ -366,7 +366,7 @@ img[alt="Find us on Google Maps"]:hover {
   .section {
     padding: 20px 10px;   /* shrink section padding */
   }
-
+}
 
 
 
@@ -623,7 +623,6 @@ footer nav a {
 }
 footer nav a:hover {
   color: #fff;
-}
 }
 
 
