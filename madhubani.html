@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hand Painted – Mohor</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+  
+  <h1>
+    <img src="images/Picsart_25-09-08_01-07-06-365 copy2.png" alt="Boutique Logo" class="logo">
+    Mohor Boutique
+  </h1>
+  
+    <button class="menu-toggle" aria-label="Toggle Menu">
+      <i class="fas fa-bars"></i>
+    </button>
+    <nav class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="silk.html">Silk</a>
+      <a href="cotton.html">Cotton</a>
+      <a href="madhubani.html#contact">Contact</a>
+    </nav>
+  </header>
+
+    <!-- Hamburger -->
+  <button class="menu-toggle" aria-label="Toggle Menu">
+    <i class="fas fa-bars"></i>
+  </button>
+
+  <!-- Breadcrumb -->
+  <div class="breadcrumb">
+    <a href="index.html"><i class="fas fa-home"></i> Home</a> › 
+    <span>Cotton Wear</span>
+  </div>
+
+  <!-- Hero -->
+  <section class="hero" style="background:url('images/Madhubani\ hand\ painted/hero.jpg') center/cover no-repeat;">
+    <div class="hero-content">
+      <h2>Madhubani Hand Painted</h2>
+      <p>Wear art, not just fashion</p>
+    </div>
+  </section>
+
+  <!-- Product Grid -->
+  <section class="section">
+    <h2>Explore Hand Painted Clothing</h2>
+    <div class="grid-3">
+
+
+
+      <div class="card" onclick="openModal(this)">
+        <img src="images/Madhubani hand painted/WhatsApp Image 2025-09-06 at 15.31.36_1a7116cd.jpg" alt="Madhubani Painted">
+        <h3>Krishna</h3>
+      </div>
+
+      <div class="card" onclick="openModal(this)">
+        <img src="images/Madhubani hand painted/WhatsApp Image 2025-09-06 at 15.31.37_07af3c01.jpg" alt="Madhubani Painted">
+        <h3>Rama</h3>
+
+      </div>
+
+      <div class="card" onclick="openModal(this)">
+        <img src="images/Madhubani hand painted/WhatsApp Image 2025-09-06 at 15.31.37_d1516b89.jpg" alt="Madhubani Painted">
+        <h3>Palki</h3>
+
+      </div>
+
+      <div class="card" onclick="openModal(this)">
+        <img src="images/Madhubani hand painted/WhatsApp Image 2025-09-06 at 15.31.38_33c23d69.jpg" alt="Madhubani Painted">
+        <h3>Durga</h3>
+
+      </div>
+
+
+    </div>
+  </section>
+
+    <!-- Modal (Lightbox) -->
+  <div id="imageModal" class="modal">
+  <span class="close" onclick="closeModal()">&times;</span>
+  <span class="prev" onclick="changeSlide(-1)">&#10094;</span>
+  <span class="next" onclick="changeSlide(1)">&#10095;</span>
+
+  <div class="modal-inner">
+    <img class="modal-content" id="modalImage">
+    <div id="caption"></div>
+    <!-- Thumbnails will only appear here -->
+    <div id="modalThumbnails" class="thumb-row"></div>
+  </div>
+</div>
+
+  <!-- Visit Our Store Section -->
+  <section class="visit-store">
+    <h2>Visit Our Store For More</h2>
+    <p>Explore a wide range of exclusive collections available only at our boutique.</p>
+  </section>
+
+  <!-- Footer -->
+  <footer id="contact">
+    <nav>
+      <a href="https://www.instagram.com/mohor_boutique2023?utm_source=qr&igsh=a3B0MmpwZXBlZzI3" target="_blank"><i class="fab fa-instagram"></i> Instagram</a>
+      <a href="https://www.facebook.com/share/1BhsuhqLXt/" target="_blank"><i class="fab fa-facebook"></i> Facebook</a>
+      <a href="tel:8967172602"><i class="fas fa-phone"></i> Call</a>
+      <a href="boutiquemohor2023@gmail.com" target="_blank"><i class="fas fa-envelope"></i> Email</a>
+    </nav>
+    <p>© 2025 Boutique. All rights reserved.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Silk Wear – Mohor</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+
+  <h1>
+    <img src="images/Picsart_25-09-08_01-07-06-365 copy2.png" alt="Boutique Logo" class="logo">
+    Mohor Boutique
+  </h1>
+
+    <button class="menu-toggle" aria-label="Toggle Menu">
+      <i class="fas fa-bars"></i>
+    </button>
+
+    <nav class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="cotton.html">Cotton</a>
+      <a href="madhubani.html">Madhubani</a>
+      <a href="silk.html#contact">Contact</a>
+    </nav>
+  </header>
+
+    <!-- Hamburger -->
+  <button class="menu-toggle" aria-label="Toggle Menu">
+    <i class="fas fa-bars"></i>
+  </button>
+
+  <!-- Breadcrumb -->
+  <div class="breadcrumb">
+    <a href="index.html"><i class="fas fa-home"></i> Home</a> › 
+    <span>Silk Wear</span>
+  </div>
+
+  <!-- Hero -->
+  <section class="hero" style="background:url('images/Silk/Vishnupuri\ batik\ pure\ silk\ 2.jpg') center/cover no-repeat;">
+    <div class="hero-content">
+      <h2>Silk Wear Collection</h2>
+      <p>Timeless grace of pure silk, crafted to drape you in effortless luxury.</p>
+    </div>
+  </section>
+
+  <!-- Product Grid -->
+  <section class="section">
+    <h2>Explore Silk Wear</h2>
+    <div class="grid-3">
+
+      <div class="card special" 
+        onclick="openModal(this)" 
+        data-images="images\Silk\bishnupuri\IMG-20250909-WA0004.jpg,images/Silk/Vishnupuri batik pure silk.jpg,images/Silk/Vishnupuri batik pure silk 2.jpg,images\Silk\bishnupuri\IMG-20250909-WA0002.jpg,images\Silk\bishnupuri\IMG-20250909-WA0003.jpg,images\Silk\bishnupuri\IMG-20250909-WA0005.jpg,images\Silk\bishnupuri\IMG-20250909-WA0006.jpg,images\Silk\bishnupuri\IMG-20250909-WA0007.jpg,images\Silk\bishnupuri\WhatsApp Image 2025-09-09 at 09.22.23_c57184ee.jpg">
+        <span class="badge">Featured</span>
+        <img src="images\Silk\bishnupuri\IMG-20250909-WA0004.jpg" alt="Bishnupuri Batik Pure Silk">
+        <h3>Bishnupuri Batik Pure Silk</h3>
+      </div>
+
+      <div class="card" onclick="openModal(this)" data-images="images/Silk/crepe silk.jpg">
+        <img src="images/Silk/crepe silk.jpg" alt="Crepe Silk">
+        <h3>Crepe Silk</h3>
+      </div>
+
+      <div class="card" onclick="openModal(this)" data-images="images/Silk/Mangalgiri silk.jpg">
+        <img src="images/Silk/Mangalgiri silk.jpg" alt="Mangalgiri Silk">
+        <h3>Mangalgiri Silk</h3>
+      </div>
+
+      <div class="card" onclick="openModal(this)" data-images="images/Silk/Murshidabad batik pure silk.jpg">
+        <img src="images/Silk/Murshidabad batik pure silk.jpg" alt="Silk mark certified pure silk">
+        <h3>Murshidabad Batik Pure Silk</h3>
+      </div>
+
+      <div class="card" onclick="openModal(this)" data-images="images/Silk/kuppadam/IMG-20250906-WA0025.jpg,images/Silk/kuppadam/IMG-20250907-WA0033.jpg,images/Silk/kuppadam/IMG-20250907-WA0035.jpg,images/Silk/kuppadam/IMG-20250907-WA0036.jpg,images/Silk/kuppadam/IMG-20250907-WA0038.jpg,images/Silk/kuppadam/WhatsApp Image 2025-09-07 at 15.57.53_0c1de747.jpg">
+        <img src="images/Silk/kuppadam/IMG-20250906-WA0025.jpg" alt="Kuppadam Silk">
+        <h3>Kuppadam Silk</h3>
+      </div>
+
+      <div class="card" onclick="openModal(this)" data-images="images/Silk/Wash by wash pure silk matka.jpg">
+        <img src="images/Silk/Wash by wash pure silk matka.jpg" alt="Wash by wash pure silk matka">
+        <h3>Wash By Wash Pure Silk Matka</h3> 
+      </div>
+
+      <div class="card" onclick="openModal(this)" data-images="images/Silk/Silk mark certified kanjivaram.jpg">
+        <img src="images/Silk/Silk mark certified kanjivaram.jpg" alt="Silk mark certified kanjivaram">
+        <h3>Silk Mark Certified Kanjivaram</h3> 
+      </div>
+
+      <div class="card" onclick="openModal(this)" data-images="images/Silk/Silk by cotton maheshwari2.jpg,images/Silk/silk by cotton maheshwari/Silk by cotton maheshwari.jpg,images/Silk/silk by cotton maheshwari/Silk by cotton maheshwari3.jpg,images/Silk/silk by cotton maheshwari/Silk by cotton maheshwari4.jpg">
+        <img src="images/Silk/Silk by cotton maheshwari2.jpg" alt="Silk By Cotton Maheshwari">
+        <h3>Silk By Cotton Maheshwari</h3> 
+      </div> 
+
+    </div>
+  </section>
+
+    <!-- Modal (Lightbox) -->
+  <div id="imageModal" class="modal">
+  <span class="close" onclick="closeModal()">&times;</span>
+  <span class="prev" onclick="changeSlide(-1)">&#10094;</span>
+  <span class="next" onclick="changeSlide(1)">&#10095;</span>
+
+  <div class="modal-inner">
+    <img class="modal-content" id="modalImage">
+    <div id="caption"></div>
+    <!-- Thumbnails will only appear here -->
+    <div id="modalThumbnails" class="thumb-row"></div>
+  </div>
+</div>
+
+  <!-- Visit Our Store Section -->
+  <section class="visit-store">
+    <h2>Visit Our Store For More</h2>
+    <p>Explore a wide range of exclusive collections available only at our boutique.</p>
+  </section>
+
+  <!-- Footer -->
+  <footer id="contact">
+    <nav>
+      <a href="https://www.instagram.com/mohor_boutique2023?utm_source=qr&igsh=a3B0MmpwZXBlZzI3" target="_blank"><i class="fab fa-instagram"></i> Instagram</a>
+      <a href="https://www.facebook.com/share/1BhsuhqLXt/" target="_blank"><i class="fab fa-facebook"></i> Facebook</a>
+      <a href="tel:8967172602"><i class="fas fa-phone"></i> Call</a>
+      <a href="boutiquemohor2023@gmail.com" target="_blank"><i class="fas fa-envelope"></i> Email</a>
+    </nav>
+    <p>© 2025 Boutique. All rights reserved.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

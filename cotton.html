@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cotton Wear – Mohor</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+  
+  <h1>
+    <img src="images/Picsart_25-09-08_01-07-06-365 copy2.png" alt="Boutique Logo" class="logo">
+    Mohor Boutique
+  </h1>
+
+    <button class="menu-toggle" aria-label="Toggle Menu">
+      <i class="fas fa-bars"></i>
+    </button>
+    <nav class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="silk.html">Silk</a>
+      <a href="madhubani.html">Madhubani</a>
+      <a href="cotton.html#contact">Contact</a>
+    </nav>
+  </header>
+
+    <!-- Hamburger -->
+  <button class="menu-toggle" aria-label="Toggle Menu">
+    <i class="fas fa-bars"></i>
+  </button>
+
+  <!-- Breadcrumb -->
+  <div class="breadcrumb">
+    <a href="index.html"><i class="fas fa-home"></i> Home</a> › 
+    <span>Cotton Wear</span>
+  </div>
+
+  <!-- Hero -->
+  <section class="hero" style="background:url('images/cotton/mall cotton bp/Mall cotton with BP3.jpg') center/cover no-repeat;">
+    <div class="hero-content">
+      <h2>Cotton Wear Collection</h2>
+      <p>Experience Comfort Redefined With Pure Cotton.</p>
+    </div>
+  </section>
+
+  <!-- Product Grid -->
+  <section class="section">
+    <h2>Explore Cotton Wear</h2>
+    <div class="grid-3">
+
+      <div class="card" onclick="openModal(this)" data-images="images/cotton/Dhonekhali cotton.jpg">
+        <img src="images/cotton/Dhonekhali cotton.jpg" alt="Dhonekhali cotton">
+        <h3>Dhonekhali Cotton</h3>
+      </div>
+
+      <div class="card" onclick="openModal(this)" data-images="images/cotton/Pure cotton block kalamkari.jpg">
+        <img src="images/cotton/Pure cotton block kalamkari.jpg" alt="Pure cotton block kalamkari">
+        <h3>Pure Cotton Block Kalamkari</h3>
+      </div>
+
+      <div class="card" onclick="openModal(this)" data-images="images/cotton/mall cotton bp/Mall cotton with BP.jpg,images/cotton/mall cotton bp/Mall cotton with BP2.jpg,images/cotton/mall cotton bp/Mall cotton with BP3.jpg,images/cotton/mall cotton bp/Mall cotton with BP4.jpg">
+        <img src="images/cotton/mall cotton bp/Mall cotton with BP.jpg" alt="Mall cotton with BP">
+        <h3>Mall cotton with BP</h3>
+      </div>
+
+      <div class="card" onclick="openModal(this)" data-images="images/cotton/bengal cotton/WhatsApp Image 2025-09-07 at 16.01.12_381647b0.jpg,images/cotton/bengal cotton/bengal cotton2.jpg,images/cotton/bengal cotton/bengal cotton3.jpg,images/cotton/bengal cotton/bengal cotton 4.jpg">
+        <img src="images/cotton/bengal cotton/WhatsApp Image 2025-09-07 at 16.01.12_381647b0.jpg" alt="Bengal Cotton">
+        <h3>Bengal Cotton</h3>
+      </div>
+
+      <div class="card" onclick="openModal(this)" data-images="images/cotton/Cotton jamdani/IMG-20250907-WA0024.jpg,images/cotton/Cotton jamdani/IMG-20250907-WA0026.jpg,images/cotton/Cotton jamdani/IMG-20250907-WA0028.jpg,images/cotton/Cotton jamdani/IMG-20250907-WA0029.jpg,images/cotton/Cotton jamdani/IMG-20250907-WA0030.jpg">
+        <img src="images/cotton/Cotton jamdani/IMG-20250907-WA0024.jpg" alt="Cotton Jamdani">
+        <h3>Cotton Jamdani</h3>
+      </div>
+
+
+    </div>
+  </section>
+
+    <!-- Modal (Lightbox) -->
+  <div id="imageModal" class="modal">
+  <span class="close" onclick="closeModal()">&times;</span>
+  <span class="prev" onclick="changeSlide(-1)">&#10094;</span>
+  <span class="next" onclick="changeSlide(1)">&#10095;</span>
+
+  <div class="modal-inner">
+    <img class="modal-content" id="modalImage">
+    <div id="caption"></div>
+    <!-- Thumbnails will only appear here -->
+    <div id="modalThumbnails" class="thumb-row"></div>
+  </div>
+</div>
+
+  <!-- Visit Our Store Section -->
+  <section class="visit-store">
+    <h2>Visit Our Store For More</h2>
+    <p>Explore a wide range of exclusive collections available only at our boutique.</p>
+  </section>
+
+  <!-- Footer -->
+  <footer id="contact">
+    <nav>
+      <a href="https://www.instagram.com/mohor_boutique2023?utm_source=qr&igsh=a3B0MmpwZXBlZzI3" target="_blank"><i class="fab fa-instagram"></i> Instagram</a>
+      <a href="https://www.facebook.com/share/1BhsuhqLXt/" target="_blank"><i class="fab fa-facebook"></i> Facebook</a>
+      <a href="tel:8967172602"><i class="fas fa-phone"></i> Call</a>
+      <a href="boutiquemohor2023@gmail.com" target="_blank"><i class="fas fa-envelope"></i> Email</a>
+    </nav>
+    <p>© 2025 Boutique. All rights reserved.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

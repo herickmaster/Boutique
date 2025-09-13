@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mohor Boutique Store</title>
+
+
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<script src="script.js"></script>
+
+<body>
+
+  <!-- Header -->
+  <header>
+  <h1>
+    <img src="images/Picsart_25-09-08_01-07-06-365 copy2.png" alt="Boutique Logo" class="logo">
+    Mohor Boutique
+  </h1>
+
+  <!-- Hamburger -->
+  <button class="menu-toggle" aria-label="Toggle Menu">
+    <i class="fas fa-bars"></i>
+  </button>
+
+  <!-- Navbar -->
+  <nav class="nav-links">
+    <nav id="nav-menu">
+      <a href="#about">About</a>
+      <a href="#collections">Collections</a>
+      <a href="#visit">Visit Us</a>
+      <a href="#contact">Contact</a>
+  </nav>
+</header>
+
+  <!-- Script for menu toggle -->
+  <script>
+    const hamburger = document.getElementById('hamburger');
+    const navMenu = document.getElementById('nav-menu');
+
+    hamburger.addEventListener('click', () => {
+      navMenu.classList.toggle('active');
+    });
+  </script>
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="hero-content">
+      <h2>Where Elegance Meets Individuality</h2>
+      <p>Discover timeless fashion at our store.</p>
+      <button class="btn btn-primary" onclick="document.getElementById('visit').scrollIntoView({behavior:'smooth'})">Visit Us Today</button>
+    </div>
+  </section>
+
+  <!-- About Us -->
+  <section class="section about" id="about">
+    <img src="images/WhatsApp Image 2025-09-06 at 14.46.54_e4814d28.jpg" alt="store">
+    <div>
+      <h2>About Us</h2>
+      <p>Hi there! Welcome to Mohor ✨ We’re a homegrown boutique that started right from our living room. Every item you’ll find here is chosen with love, care, and a whole lot of excitement for fashion. From handpicking the styles to carefully packing your orders, everything we do is about making your shopping experience feel personal and special. Think of us as your cozy corner for unique finds that make you feel good, without all the fuss 💛</p>
+    </div>
+  </section>
+
+  <!-- Collections -->
+  <section class="section" id="collections">
+    <h2>Our Collections</h2>
+    <div class="grid-3">
+    
+      <div class="card">
+        <a href="silk.html">
+        <img src="images/Silk/Pure Vishnupuri silk.jpg" alt="Silk Wear">
+        <h3>Silk Wear</h3>
+        </a>
+      </div>
+    
+      <div class="card">
+        <a href="cotton.html">
+        <img src="images/cotton/Dhonekhali cotton.jpg" alt="Cotton Wear">
+        <h3>Cotton Wear</h3>
+        </a>
+      </div>
+
+
+      <div class="card">
+        <a href="madhubani.html">
+        <img src="images/Madhubani hand painted/WhatsApp Image 2025-09-06 at 15.31.37_07af3c01.jpg" alt="Hand Painted">
+        <h3>Hand Painted</h3>
+        </a>
+      </div>
+       
+    </div>
+  </section>
+
+  <!-- Testimonials -->
+  <section class="testimonials" id="testimonials">
+    <h2>And So Much More</h2>
+    <p class="testimonial">“Come discover a space where every product is chosen with care, meant to bring warmth, comfort, and a touch of joy into your everyday life.”</p>
+  </section>
+
+  <!-- Visit Us -->
+  <section class="section visit" id="visit">
+    <div>
+      <h2>Visit Our Store</h2>
+      <p><i class="fas fa-map-marker-alt"></i> Damdim Tea Garden, Betbari Tea Garden, West Bengal 735209<br>
+         <i class="fas fa-clock"></i> Mon–Sat: 10am – 8pm, Sun: Closed<br>
+         <i class="fas fa-phone"></i> 8967172602 / 9933140976<br>
+         <i class="fas fa-envelope"></i> boutiquemohor2023@gmail.com
+      </p>
+         
+    </div>
+<!-- Replace with your actual screenshot -->
+<a href="https://www.google.com/maps/place/Mohor+boutique/@26.8519025,88.6722213,18.04z/data=!4m14!1m7!3m6!1s0x39e40d00316d7515:0x3e65c78e961fbcb4!2sMohor+boutique!8m2!3d26.8516933!4d88.6721077!16s%2Fg%2F11xt49q2xf!3m5!1s0x39e40d00316d7515:0x3e65c78e961fbcb4!8m2!3d26.8516933!4d88.6721077!16s%2Fg%2F11xt49q2xf?entry=ttu&g_ep=EgoyMDI1MDkwMy4wIKXMDSoASAFQAw%3D%3D" target="_blank">
+  <img src="images/visit us.png" 
+       alt="Find us on Google Maps" 
+       style="width:100%; max-width:600px; border-radius:10px; box-shadow:0 2px 8px rgba(0,0,0,0.2); cursor:pointer;">
+</a>
+
+  </section>
+
+  <!-- Footer -->
+  <footer id="contact">
+    <nav>
+      <a href="https://www.instagram.com/mohor_boutique2023?utm_source=qr&igsh=a3B0MmpwZXBlZzI3" target="_blank"><i class="fab fa-instagram"></i> Instagram</a>
+      <a href="https://www.facebook.com/share/1BhsuhqLXt/" target="_blank"><i class="fab fa-facebook"></i> Facebook</a>
+      <a href="tel:8967172602"><i class="fas fa-phone"></i> Call</a>
+      <a href="mailto:boutiquemohor2023@gmail.com?subject=Hello&body=How%20are%20you?"><i class="fas fa-envelope"></i> Email</a>
+    </nav>
+    <p>© 2025 Boutique. All rights reserved.</p>
+  </footer>
+
+
+
+  
+
+</body>
+</html>
+
+
+
